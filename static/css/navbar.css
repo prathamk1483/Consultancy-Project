@@ -1,0 +1,244 @@
+a {
+  text-decoration: none;
+  font-size: 0.87rem;
+}
+
+li {
+  list-style: none;
+  font-family: 'Cinzel Decorative', cursive;
+
+}
+b{
+  font-size: 0.87rem;
+  color: rgb(255, 255, 255);
+}
+.navbar {
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 20px 0px 20px;
+  background-color:    #ff440000;
+  background-color: #5b510e00;
+  /* background-image: radial-gradient(147deg, #FFE53B 0%, #FF2525 74%); */
+  /*color: #000000;*/
+  /*color: white;*/
+  color:#333333;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0%;
+  z-index: 1000;
+ 
+}
+
+nav{
+  background-color: #000000;
+}
+
+.nav-links a:hover,.aa:hover {
+  text-decoration: none;
+  /*color: #ff9e9e;*/
+  /* color: #922700;
+  background: #922700; */
+}
+
+.menu {
+  display: flex;
+  gap: 0rem;
+  font-size: 18px;
+}
+
+.menu li:hover, .aa:hover {
+  background-color:    #e1764f;
+  /* font-weight: bolder; */
+ 
+  color: #000000;
+ 
+
+  border-radius: 5px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.menu li {
+  padding: 5px 10px;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 1135px) {
+ .menu {
+    display:none;
+    position: absolute;
+     background-color:  #00000000;
+
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 28px;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    /*background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);*/
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.logo
+{
+  padding-bottom:22px;
+   height: 70px;
+}
+.logo-container {
+  flex: 1; /* Allow the logo to grow and take available space */
+}
+
+.cdot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1vh;
+  width: 10%;
+}
+
+/* Style the blinking dot */
+.dot {
+  width: 5px;
+  height: 5px;
+  /*background-color: rgb(0, 0, 0);*/
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1s ease-in-out infinite; /* Apply the blinking animation */
+}
+
+/* Define the blinking animation */
+@keyframes blink {
+  0% {
+      opacity: 1; /* Dot is fully visible */
+  }
+  50% {
+      opacity: 0; /* Dot is invisible */
+  }
+  100% {
+      opacity: 1; /* Dot is fully visible again */
+  }
+}
+
+
+/* Dropdown Container */
+.dropdown {
+position: relative;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #87262e; /* Background color of the dropdown */
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+top: 100%; /* Position the dropdown below the 'About' link */
+left: 0;
+z-index: 1000;
+padding: 10px;
+}
+
+/* Style for the dropdown links */
+.dropdown-content a {
+display: block;
+text-decoration: none;
+color: #000000; /* Text color for dropdown links */
+padding: 8px 10px;
+transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+/* Change the link color on hover */
+.dropdown-content a:hover {
+color: #ab2323; /* Text color on hover */
+}
+
+.dropdown-menu b{
+  color: #000000;
+}
+
+/* Show the dropdown menu when hovering over the 'About' link */
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
+
+body{
+background-color: rgb(255, 255, 255);        
+}
+.background-container {
+position: relative;
+padding-top: 70px;  
+}
+
+.background-image {
+width: 100%; /* Adjust the width as needed */
+/* height: 100vh; */
+}
+
+.overlay-image {
+position: absolute;
+top: 9%;
+left: 37%;
+z-index: 1;
+height: 15rem;
+width: auto;
+/* You can set the width and adjust the position as needed */
+}
+@media (max-width: 768px) {
+.background-image {
+background-size: 150% 100%; /* Adjust the values as needed for the cropping effect */
+}
+}
+@media(min-width :1135px){
+#language{
+  margin: auto 40px auto auto;
+}
+}
+
+.navbar-custom {
+  background: #ff440000;
+  /* Change the background color of the navbar */
+}
+
+/* Custom CSS for Dropdown Menu */
+.dropdown-menu {
+  background-color: #ffffff;
+  /* Change the background color of the dropdown menu */
+}
+
+.a:hover {
+  background: #922700;
+  /* Change the background color of the dropdown menu */
+
+}
+

@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: 'Arial', sans-serif; */
+}
+
+
+
+.container {
+  margin-top: 100px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding-bottom: 30px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.left-content {
+  width:80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.ganesh-image {
+  width:50%;
+ 
+}
+
+.right-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#ganesha--mantra {
+  font-size: 2rem;
+  color: rgb(32, 36, 40);
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  
+}
+
+.donation--button {
+  margin-top: 3vh;
+  display: inline-block;
+  padding: 8px 8px;
+  font-size: 1.4rem;
+  background-color: #ff650b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+a.donation--button:hover {
+  background-color: #ff7700;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 430px) {
+  .container {
+    margin-top: 100px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    height: 70%;
+    margin-bottom: 20px;
+  }
+  
+  .left-content {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .ganesh-image {
+      width: 200px;
+      
+  }
+  #ganesha--mantra{
+     font-size: 0.7rem;
+  }
+
+  .donation--button {
+    padding:5px 5px;
+      margin-top: 5px;
+      font-size: 0.4rem;
+  }
+} 
+
+
+@media screen and (max-width: 700px) {
+  .container {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 30px;
+    width: 100%;
+    height: 70%;
+    margin-bottom: 20px;
+  }
+  
+  .left-content {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .ganesh-image {
+      width: 200px;
+      
+  }
+  #ganesha--mantra{
+     font-size: 1.2rem;
+  }
+
+  .donation--button {
+    padding:5px 5px;
+      margin-top: 5px;
+      font-size: 1rem;
+  }
+} 
+
+@media screen and (max-width: 980px) {
+  .container {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 30px;
+    width: 100%;
+    height: 70%;
+    margin-bottom: 20px;
+  }
+  
+  .left-content {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .ganesh-image {
+      width: 200px;
+  }
+  #ganesha--mantra{
+     font-size: 1.3rem;
+  }
+
+  .donation--button {
+    padding:5px 5px;
+      margin-top: -2px;
+      font-size: 1.2rem;
+  }
+} 

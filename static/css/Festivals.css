@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.about-temple {
+    width: 90%;
+    margin: 50px auto; /* Center-align the .about-temple section */
+    /*background: linear-gradient(-90deg,#ff5353,#ff4c4c);
+    background-color:#FF2525;*/
+    padding:50px 50px;
+    align-items: center;
+    
+}
+.info-main{
+    border-radius: 8px;
+    box-shadow: 1.8px 1.5px 4px 1.5px #eea7a7;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.info-main:hover{
+    box-shadow: 1px 2px 3px 2px #f58383;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0px auto; 
+    background-color: #f0f0f0;
+    color:	 #ff3300;
+    border-radius: 2px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 10px;
+}
+
+
+
+.info-head{
+    background-color: #f0f0f0;
+    margin:20px auto 0;
+    padding:5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #ff3300;
+    color:rgb(254,254,254);
+    /* Apply border-radius to top-left and top-right corners */
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+font-size: 1.5rem;
+font-weight: 550;
+
+
+}
+.info-card img{
+    height: 456px;
+    width:656px;
+    align-items: center;
+}
+#temple-name{
+    font-size: 30px;
+    color:	 #ff3300;
+    border-bottom-right-radius: 8px;
+   
+}
+
+.info{
+    margin:30px 10px;
+    hyphens: auto;
+}
+.main-footer{
+    width:100%;
+    background-color: #ff4500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bold;
+}
+.footer-info{
+    display: flex;
+    justify-content:space-evenly;
+    padding:20px 0;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap:13px;
+    padding-top:10px;
+    font-weight: bold;
+    /*color: white;*/
+    color:#333333;
+    
+ }
+ .footer-links a{
+    /*color:white;*/
+    color:#333333;
+    text-decoration: none;
+ }
+ .footer-links a:hover{
+    color: #fdb6b6;
+    cursor: pointer;
+    transform: translateX(2px);
+    transition:transform 0.2s ease-in-out;
+ }
+ .footer-header{
+    font-size: 20px;
+    font-weight: 700;
+ }
+.about-footer{
+    height:50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin:10px 0;
+    
+}
+
+
+.fa{
+    font-size: 1.25rem !important;
+    color:#333333;
+    /*color:white;*/
+}
+.fa:hover{
+    cursor: pointer;
+    color: #ff9e9e;
+}
+.fa::after{
+    color:#f58383;
+}
+
+#contact{
+    margin:20px auto 0;
+}
+
+@media screen and (max-width:880px){
+    .info-card{
+        flex-direction: column;
+        
+    }
+    .about-temple{
+        width: 90%;
+    }
+    .about-footer{
+        height:40px;
+    }
+    .fa{
+        font-size: 17px !important;
+    }
+
+    .about-footer{
+        gap:30px;
+    }
+
+}
+@media screen and (max-width:400px){
+    .info-card{
+        flex-direction: column;
+        
+    }
+    .about-temple{
+        width: 100%;
+    }
+    .info-card img {
+        height:190px;
+        width:190px;
+    }
+    .about-footer{
+        height:30px;
+    }
+    
+    .fa{
+        font-size: 15px !important;
+    }
+}
+
+@media screen and (max-width:1002px) {
+    
+    .about-footer{
+        gap:30px;
+    }
+}
+
+@media screen and (max-width:450px) {
+.footer-info{
+    flex-direction: column;
+    align-items: center;
+    
+}
+.footer-links{
+    max-width:200px;
+    margin-top:20px;
+}
+  
+}
+
