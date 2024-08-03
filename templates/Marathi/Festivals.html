@@ -1,0 +1,118 @@
+{% extends "Marathi/base.html" %}
+{% block links %}
+<!-- <link rel="stylesheet" href="/static/css/navbar.css"> -->
+<link rel="stylesheet" href="/static/css/footer.css">
+{% endblock links %}
+{% block style %}
+{{ block.super }}
+<style>
+    body {
+        /* font-family: 'Poppins', sans-serif; */
+        background-color: rgba(255, 255, 255, 0.4);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        padding: 20px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        margin-bottom: 100px;
+        opacity: 0; /* Start with opacity 0 for fade-in effect */
+        transition: opacity 1s ease; /* Smooth fade-in transition */
+    }
+
+    .container.show {
+        opacity: 1; /* Make the container visible */
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    th {
+        background-color: #FF2525;
+        color: white;
+    }
+
+    .container mt-5 {
+        margin-bottom: 50px;
+    }
+
+    .table img {
+        width:120px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Add the following styles for table borders */
+    .table {
+        border-collapse: collapse;
+        opacity: 0; /* Start with opacity 0 for fade-in effect */
+        transition: opacity 1s ease; /* Smooth fade-in transition */
+    }
+
+    .table.show {
+        opacity: 1; /* Make the table visible */
+    }
+
+    .table th, .table td {
+        border: 1px solid black;
+        transition: opacity 0.5s ease; /* Smooth transition for fade-in effect */
+        opacity: 0; /* Start with opacity 0 for fade-in effect */
+    }
+
+    .table.show th, .table.show td {
+        opacity: 1; /* Make table cells visible */
+    }
+</style>
+{% endblock style %}
+{% block body %}
+<h1 style="font-weight: bolder; margin-top: 100px;">सण कॅलेंडर</h1>
+<div class="container mt-5" style="background-color: rgb(255, 255, 255);border: #333 2px; border-radius: 6px;">
+    
+    <p class="lead mb-4" style="font-weight: bold;">गणपती बाप्पाला मान देणाऱ्या या शुभ सणांसाठी तुमची कॅलेंडर चिन्हांकित करा.</p>
+    <div class="table-responsive" style="border: #333 2px;border-radius: 6px;">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="background-color: #86262e;">उत्सव</th>
+                    <th style="background-color: #86262e;">तारीख</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>संकष्टी चतुर्थी</td>
+                    <td>२९ जानेवारी, २८ फेब्रुवारी, २८ मार्च, २७ एप्रिल, २६ मे, २५ जून, २४ जुलै, २२ ऑगस्ट, २१ सप्टेंबर, २० ऑक्टोबर, १८ नोव्हेंबर, १८ डिसेंबर</td>
+                </tr>
+                <tr>
+                    <td>विनायक चतुर्थी</td>
+                    <td>१४ जानेवारी, १३ फेब्रुवारी, १३ मार्च, १२ एप्रिल, ११ मे, १० जून, ९ जुलै, ८ ऑगस्ट, ६ सप्टेंबर, ६ ऑक्टोबर, ५ नोव्हेंबर, ५ डिसेंबर</td>
+                </tr>
+                <tr>
+                    <td>गणेश जयंती</td>
+                    <td>१३ फेब्रुवारी</td>
+                </tr>
+                <tr>
+                    <td>गणेशोत्सव</td>
+                    <td>७ सप्टेंबर (सुरु) - १७ सप्टेंबर (संपला)</td>
+                </tr>   
+                <tr>
+                    <td>अंगारकी चतुर्थी</td>
+                    <td>२५ जून</td>
+                </tr>             
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Trigger the fade-in effect for the container
+        document.querySelector('.container').classList.add('show');
+        // Trigger the fade-in effect for the table and its contents
+        document.querySelector('.table').classList.add('show');
+    });
+</script>
+{% endblock body %}

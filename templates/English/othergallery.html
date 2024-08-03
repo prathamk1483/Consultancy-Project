@@ -1,0 +1,232 @@
+{% extends "English/base.html" %}
+{% block links %}
+{{ block.super }}
+<style>
+    .uniform-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+      border: 1.5px solid #3a3a3a; /* Add border to images */
+      border-radius: 10px; /* Optional: Rounded corners */
+    }
+
+    /* Adjust space around each image container */
+    .genie {
+      padding: 15px; /* Space around the image */
+    }
+
+    /* Hover effect */
+    .genie:hover .uniform-image {
+      transform: scale(1.05); /* Scale up the image slightly */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    }
+    .image-description p {
+        text-align: center;
+        padding-top: 10px;
+        color: #333; /* Example text color, adjust as needed */
+        font-size: 1em; /* Example font size, adjust as needed */
+        font-weight: bold;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 767px) {
+        .genie {
+            padding: 10px;
+        }
+        .uniform-image {
+            height: 300px; /* Adjust height for smaller screens */
+        }
+    }
+</style>
+{% endblock links %}
+
+{% block body %}
+<div class="container mt-5" >
+  <h1 style="text-align: center; margin-bottom: 50px;margin-top: 100px; font-weight: bold;">Other Photos Gallery</h1>
+  <div class="row photos">
+          <!-- Repeat this div block for each image -->
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+              <a href="/static/images/othergallery/othergallery1.jpeg" data-lightbox="photos">
+                  <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery1.jpeg" alt="Gallery Image">
+              </a>
+              <div class="image-description">
+                <p>Farmer Guidance session-2022</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+              <a href="/static/images/othergallery/othergallery2.jpeg" data-lightbox="photos">
+                  <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery2.jpeg" alt="Gallery Image">
+              </a>
+              <div class="image-description">
+                <p>Ganesh Jayanti Utsav - 2023 Invitation</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+              <a href="/static/images/othergallery/othergallery3.jpeg" data-lightbox="photos">
+                  <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery3.jpeg" alt="Gallery Image">
+              </a>
+              <div class="image-description">
+                <p>Farmer Guidance session-2022</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+              <a href="/static/images/othergallery/othergallery4.jpeg" data-lightbox="photos">
+                  <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery4.jpeg" alt="Gallery Image">
+              </a>
+              <div class="image-description">
+                <p>Future Development Plan</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+              <a href="/static/images/othergallery/othergallery5.jpeg" data-lightbox="photos">
+                  <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery5.jpeg" alt="Gallery Image">
+              </a>
+              <div class="image-description">
+                <p>Ganesh Jayanti Utsav - 2023 Invitation Card</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+              <a href="/static/images/othergallery/othergallery6.jpeg" data-lightbox="photos">
+                  <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery6.jpeg" alt="Gallery Image">
+              </a>
+              <div class="image-description">
+                <p>Ganesh Visarjan Program</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+              <a href="/static/images/othergallery/othergallery7.jpeg" data-lightbox="photos">
+                  <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery7.jpeg" alt="Gallery Image">
+              </a>
+              <div class="image-description">
+                <p>Books and Stationary distribution at school, Waigaon</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+            <a href="/static/images/othergallery/othergallery8.jpg" data-lightbox="photos">
+              <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery8.jpg" alt="Gallery Image">
+            </a>
+            <div class="image-description">
+              <p>Jeernodhar (renovation) Puja of temple</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+            <a href="/static/images/othergallery/othergallery9.png" data-lightbox="photos">
+              <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery9.png" alt="Gallery Image">
+            </a>
+            <div class="image-description">
+              <p>Jeernodhar (renovation) Puja of temple</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+            <a href="/static/images/othergallery/othergallery10.png" data-lightbox="photos">
+              <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery10.png" alt="Gallery Image">
+            </a>
+            <div class="image-description">
+              <p>JLate Shri Baba Maharaj Satarkar Kirtan program</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+            <a href="/static/images/othergallery/othergallery11.png" data-lightbox="photos">
+              <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery11.png" alt="Gallery Image">
+            </a>
+            <div class="image-description">
+              <p>Temple Trustee along with Late Shri. Baba Maharaj Satarkar</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+            <a href="/static/images/othergallery/othergallery12.png" data-lightbox="photos">
+              <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery12.png" alt="Gallery Image">
+            </a>
+            <div class="image-description">
+              <p>Ex. Guardian Minister Amravati and Minister of Maharashtra state, Mr. Pravin Pote Visited the temple</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+            <a href="/static/images/othergallery/othergallery13.png" data-lightbox="photos">
+              <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery13.png" alt="Gallery Image">
+            </a>
+            <div class="image-description">
+              <p>Ex. Guardian Minister Amravati and Minister of Maharashtra state, Mrs. Vasudatai Deshmukh visited the temple</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+            <a href="/static/images/othergallery/othergallery14.png" data-lightbox="photos">
+              <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery14.png" alt="Gallery Image">
+            </a>
+            <div class="image-description">
+              <p>Ganesh Utsav Celebration</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+            <a href="/static/images/othergallery/othergallery15.png" data-lightbox="photos">
+              <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery15.png" alt="Gallery Image">
+            </a>
+            <div class="image-description">
+              <p>Mahaprasad during Ganesh Jayanti Celebration</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+            <a href="/static/images/othergallery/othergallery16.png" data-lightbox="photos">
+              <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery16.png" alt="Gallery Image">
+            </a>
+            <div class="image-description">
+              <p>Tree Plantation drives by temple trust (Under Maharashtra Government 44 crores trees plantation)</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+            <a href="/static/images/othergallery/othergallery17.png" data-lightbox="photos">
+              <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery17.png" alt="Gallery Image">
+            </a>
+            <div class="image-description">
+              <p>Ganesh Jayan Utsav - 2024 Invitation Card</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+            <a href="/static/images/othergallery/othergallery18.png" data-lightbox="photos">
+              <img class="img-fluid uniform-image" src="/static/images/othergallery/othergallery18.png" alt="Gallery Image">
+            </a>
+            <div class="image-description">
+              <p>Farmer Guidance Session - 2024 organised by temple trust</p>
+            </div>
+          </div>
+          <!-- ... other image div blocks ... -->
+      </div>
+</div>
+{% endblock body %}
+{%block script%}
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const images = document.querySelectorAll('.genie');
+    const revealOnScroll = () => {
+        images.forEach((img) => {
+            const imgPosition = img.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            if (imgPosition < screenPosition) {
+                img.classList.add('visible');
+            }
+        });
+    };
+
+    // Initially call the function to check if any images should be shown
+    revealOnScroll();
+
+    window.addEventListener('scroll', () => {
+        revealOnScroll();
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopBtn.style.display = 'block';
+        } else {
+            scrollTopBtn.style.display = 'none';
+        }
+    });
+
+    const scrollToTop = () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    };
+
+    scrollTopBtn.addEventListener('click', scrollToTop);
+});
+</script>
+
+{%endblock%}

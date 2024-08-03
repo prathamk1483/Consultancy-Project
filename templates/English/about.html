@@ -1,0 +1,137 @@
+
+{% extends "English/base.html" %}
+{% block links %}
+<link rel="stylesheet" href="/static/css/about.css">
+<link rel="stylesheet" href="/static/css/footer.css">
+{% endblock links %}
+{% block style %}
+{{ block.super }}
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .accordion {
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: #eee;
+        text-align: left;
+        transition: background-color 0.4s ease;
+    }
+    .accordion::after {
+        content: '\002B'; /* Unicode character for "plus" sign (+) */
+        color: #777;
+        float: right;
+    }
+    .accordion.active::after {
+        content: "\2212"; /* Unicode character for "minus" sign (-) */
+    }
+    .accordion:hover {
+        background-color: #ccc;
+    }
+    .panel {
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    #scrollTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        z-index: 100;
+        cursor: pointer;
+        background-color: #007bff;
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    #scrollTopBtn:hover {
+        background-color: #0056b3;
+    }
+    /* Remove border and outline from accordion when focused */
+    .accordion:focus {
+        border: none;
+        outline: none;
+    }
+    h1{
+        margin-top: 100px;
+        text-align: center;
+    }
+</style>
+{% endblock style %}
+{% block body %}
+<div class="container mt-5 contx" style="margin-bottom: 100px;">
+    <h1>About Us</h1>
+    <div class="accordion active">History</div>
+    <div class="panel" style="max-height: none;">
+        <div class="info-card">
+            <img src="/static/images/about/about3.jpeg" alt="temple" class="info-img">
+            <p class="info">
+               Looking at the history of the idol of Siddhi Vinayaka, the legend of the idol goes back to the Virat Parva in the Mahabharata, as told by the old people of Vahiwati, when the Pandavas were in an unknown abode with Virat, and the vision of this idol ended their life as a forest dweller in an unknown abode. This idol was buried during the mid-Mughal period. The surrounding villages of Achalpur, Darapur, Kholapur were under the control of the Mughals. After that six hundred years of Anda period passed so the exact location of the idol was not known. People wanted to realize Sri but the idol could not be found and suddenly the idol was found again in the excavation. It was the 16th century, since then the idol was enshrined in a palace temple and the service of the idol in the Ingole family resumed. It continues to be organized even today. Therefore, this family is blessed with abundant prosperity by the infinite grace of Shri. This is the boon of Siddhi Vinayaka.
+            </p>
+        </div>
+    </div>
+    <div class="accordion">The Tale of Temple</div>
+    <div class="panel">
+        <div class="info-card">
+            <img src="/static/images/about/about3.jpeg" alt="temple" class="info-img">
+            <p class="info">
+                The administration of the temple is managed by the Ingole family from Diksha. Late Shri Sitaramji, Shri Sivaramji, Shri Shriramji, Shri Tulshiramji, ancestors of the Ingole family donated some of their own land to the temple on 25th July 2021 for the smooth running of the temple and for the celebration of Ganapati festival. Accordingly, from 1921 to 1930, the temple was managed by Ka. Shri Sitaramji, 1930 to 1940 - Shri Sivaramji, 1940 to 1960 - Shri Tulshiramji, Shri Tukaramji and 1960 to 1993 - Shri Dayaramji Ingole. Over time, due to the increasing number of devotees, Sr. Dayaramji Ingole suggested the establishment of a temple trust for the convenience and creation of facilities for the devotees. Accordingly, the responsibility of creating the trust was given toMr. Vilasrao Tukaramji Ingole. After many difficulties the trust was established on 31st Aug 2002, since the establishment of the trust till now Mr. Vilasrao Ingole served as the Chairman of the Trust and other nominated members of the Ingole family acted as trustees. Subsequently, the construction of the new temple was taken up from 2005 and completed in 2007. <br>
+                - Every year from Bhadrapada Shukla 4 to Purnima, a ten-day Ganesh Chaturthi festival is celebrated. <br>
+                 - It includes daily Annadan, Gnandan, Bhajan, Kirtan, Kakada and Haripath.<br>
+                - Idol immersion is done on full moon to the beat of mridanga and sounds of joy. <br>
+                 - Also Ganesh Jayanti festival is celebrated for a week in Magh Shukla Paksha every year.
+             </p>
+             
+        </div>
+    </div>
+    <div class="accordion">Uniqueness of Idol</div>
+    <div class="panel">
+        <div class="info-card">
+            <img src="/static/images/about/about3.jpeg" alt="temple" class="info-img">
+            <p class="info">
+               This idol is one of the divinely beautiful charming idols in entire Maharashtra. The idol is of the right trunk and has Siddhi on the right side and Riddhi on the left side. Ekadanta, padma at foot, conch symbolized. Which is the symbol of Shad Aishwarya. Those who have seen it do not miss anything. Both sides of the bundle are tied with flowers and Ashtamasiddhi, Anima, Garima, Laghima, Mahima Ishitva Vashitva Pratikam. Mal and Modak in the hand indicate the prosperity of life, whose darshan God fulfills the material needs and further this Bhagaveel, who avoids the sorrows of his life in front of Shri with devotion, brings happiness and peace in his life. Progeny is provided to those who are childless. The amazing beauty of the idol is not to be seen anywhere. No matter how logical, restless a person is, when he comes across the idol, he cannot fail to feel a sense of peace and happiness. Therefore, when Uttarayana becomes Dakshinayana, the first ray of sunrise falls on the idol. As if even Surya did not want to enter the Samvatsara without the darshan of Sri.
+            </p>
+        </div>
+    </div>
+    <button id="scrollTopBtn">&#8679;</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                // Close all open panels
+                var allPanels = document.querySelectorAll('.panel');
+                allPanels.forEach(function(otherPanel) {
+                    otherPanel.style.maxHeight = null;
+                    otherPanel.previousElementSibling.classList.remove("active");
+                });
+                // Open the clicked one
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+        // Automatically open the first accordion panel if it's not already active
+        if (i === 0 && !acc[i].classList.contains("active")) {
+            acc[i].click();
+        }
+    }
+});
+</script>
+{% endblock body %}

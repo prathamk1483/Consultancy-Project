@@ -1,0 +1,117 @@
+{% extends "English/base.html" %}
+{% block links %}
+<!-- <link rel="stylesheet" href="/static/css/navbar.css"> -->
+<link rel="stylesheet" href="/static/css/footer.css">
+{% endblock links %}
+{% block style %}
+{{ block.super }}
+<style>
+    body {
+        /* font-family: 'Poppins', sans-serif; */
+        background-color: rgba(255, 255, 255, 0.4);
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        padding: 20px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        margin-bottom: 100px;
+        opacity: 0; /* Start with opacity 0 for fade-in effect */
+        transition: opacity 1s ease; /* Smooth fade-in transition */
+    }
+
+    .container.show {
+        opacity: 1; /* Make the container visible */
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    th {
+        background-color: #FF2525;
+        color: white;
+    }
+
+    .container mt-5 {
+        margin-bottom: 50px;
+    }
+
+    .table img {
+        width:120px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Add the following styles for table borders */
+    .table {
+        border-collapse: collapse;
+        opacity: 0; /* Start with opacity 0 for fade-in effect */
+        transition: opacity 1s ease; /* Smooth fade-in transition */
+    }
+
+    .table.show {
+        opacity: 1; /* Make the table visible */
+    }
+
+    .table th, .table td {
+        border: 1px solid black;
+        transition: opacity 0.5s ease; /* Smooth transition for fade-in effect */
+        opacity: 0; /* Start with opacity 0 for fade-in effect */
+    }
+
+    .table.show th, .table.show td {
+        opacity: 1; /* Make table cells visible */
+    }
+</style>
+{% endblock style %}
+{% block body %}
+<h1 style="font-weight: bolder; margin-top: 100px;">Festival Calendar</h1>
+<div class="container mt-5" style="background-color: rgb(255, 255, 255);border: #333 2px; border-radius: 6px;">
+    
+    <p class="lead mb-4" style="font-weight: bold;">Mark your calendars for these auspicious festivals honoring Lord Ganesha.</p>
+    <div class="table-responsive" style="border: #333 2px;border-radius: 6px;">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="background-color: #86262e;">Festival</th>
+                    <th style="background-color: #86262e;">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sankashti Chaturthi</td>
+                    <td>January 29th, February 28th, March 28th, April 27th, May 26th, June 25th, July 24th, August 22nd, September 21st, October 20th, November 18th, December 18th</td>
+                </tr>
+                <tr>
+                    <td>Vinayaka Chaturthi</td>
+                    <td>January 14th, February 13th,  March 13th,, April 12th, May 11th, June 10th, July 9th, August 8th, September 6th, October 6th, November 5th, December 5th</td>
+                </tr>
+                <tr>
+                    <td>Ganesh Jayanti</td>
+                    <td>February 13th</td>
+                </tr>
+                <tr>
+                    <td>Ganesh Utsav</td>
+                    <td>September 7th (Starts) - September 17th (Ends)</td>
+                </tr>
+                <tr>
+                    <td>Angarki Chaturthi</td>
+                    <td>June 25th</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Trigger the fade-in effect for the container
+        document.querySelector('.container').classList.add('show');
+        // Trigger the fade-in effect for the table and its contents
+        document.querySelector('.table').classList.add('show');
+    });
+</script>
+{% endblock body %}

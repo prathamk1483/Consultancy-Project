@@ -1,0 +1,146 @@
+{% extends "Marathi/base.html" %}
+{% block style %}
+{{ block.super }}
+<style>
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    margin: 10rem auto;
+    padding : 20px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 1100px;
+    background-color:#fff;
+    /* <!-- border: 2px solid black; */
+    /* border-radius: 8px; --> */
+    box-shadow: 1.8px 1.5px 4px 1.5px #eea7a7;
+    transition: box-shadow 0.3s ease-in-out;
+    justify-content:center;
+    align-items:center;
+}
+
+.main:hover {
+  box-shadow: 1px 2px 3px 2px #eea7a7;
+}
+
+.rightimg,
+.leftimg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    width: 30%;
+}
+
+.info {
+    display: flex;
+    justify-content:center;
+    background-color: white;
+    font-size: large;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 70%; /* Adjusted width */
+    color: #ff3300;
+    opacity: 0.8; /* Adjusted opacity */
+    /* border: 2px solid black; */
+}
+
+.top,
+.bottom {
+    display: block;
+    width: 80%;
+}
+
+.leftimg img,
+.rightimg img {
+    display: block;
+    height: 60%;
+    margin: 25px auto; /* Reduce top margin for images */
+    border-radius:6px;
+}
+
+.info-head {
+    background-color: #ff3300;
+    color: #fff;
+    margin: 6px auto; /* Adjusted margin */
+    padding: 12px; /* Adjusted padding */
+    text-align: center;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+
+#info {
+    /* margin: 30px 10px; */
+    hyphens: auto;
+}
+
+/* Media Query for screens smaller than 600px */
+@media (max-width :1189px){
+  .main{
+    display : flex;
+  }
+  .bottom{
+    margin-top:-60px;
+  }
+  .info{
+    opacity:60%;
+  }
+}
+@media (max-width: 1000px) {
+  .main {
+    flex-direction: column;  /* Stack elements vertically on smaller screens */
+  }
+  .rightimg,
+  .leftimg,
+  .info {
+      width: 92%;
+  }
+  .info{
+    opacity:60%;
+  }
+}
+</style>
+
+{% endblock style %}
+{% block body %}
+  <div class="row row-top" style="margin-top: 100px;">
+    {% comment %} <h1>Temple Architecture</h1> {% endcomment %}
+</div>
+<div class="row row-top">
+ <center><h1 id="main-architecture" style="margin:40px auto 0;width:fit-content;font-weight: 700; margin-bottom: -60px;">मंदिराची वास्तुकला</h1></center>
+</div>
+    <header id="top"></header>
+    
+    <section class="about-temple">
+      
+      <div class="main">
+        <div class="rightimg">
+          
+          <img src="/static/images/4.jpg" alt="temple" class="info-img">
+          <h1 class="info-head"> जुनी वास्तुकला </h1>
+        </div>
+        <div class="info">
+          <div class="top">
+            <p id="info" style="font-family: Arial, Helvetica, sans-serif;">
+                16 व्या शतकात सिद्धिविनायक गणेश मूर्ती सापडली आणि नंतर इंगोले कुटुंबाने वडरूपी मंदिरात स्थापन केली. तेव्हापासून ते २००० पर्यंत इंगोले कुटुंबीयांनी मंदिराची देखभाल केली.
+                मंदिराच्या जीर्णोद्धाराची गरज लक्षात घेऊन मंदिराच्या पुनर्बांधणीसाठी 2000 मध्ये इंगोले कुटुंबीयांनी ट्रस्टची स्थापना केली आणि त्यानंतर 2006 नंतर या सुंदर नवीन वास्तूनुसार मंदिराच्या उभारणीचे काम सुरू झाले. भक्तांच्या देणगीच्या मदतीने, दोन वर्षांत नवीन मंदिराची स्थापना. संगमरवरी आणि नवीनतम डिझाइनने सजवलेले नवीन बांधकाम.
+            </p>
+          </div>
+        </div>
+        <div class="leftimg">
+          
+          <img src="/static/images/2.jpg" alt="temple" class="info-img">
+          <h1 class="info-head">नवीन वास्तुकला </h1>
+        </div>
+      </div>
+    </section>
+    {% endblock body %}

@@ -1,0 +1,71 @@
+{% extends "English/base.html" %}
+{% block style %}
+        body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+     /* Adjust this value according to your footer's height */
+}
+
+.container {
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px; /* Adjust this value to match the padding-bottom of the body */
+}
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        th {
+            background-color: #FF2525;
+            color: white;
+        }
+        .container mt-5{
+            margin-bottom: 50px;
+        }
+{% endblock style %}
+{% block body %}
+<div class="background-container" style="margin-top: -70px;">
+    <img src="/static/images/common.png" alt="Background Image" class="background-image">
+  </div>
+ 
+  <div class="container mt-5">
+    <h2>Mahaabhishek & GaneshYag Schedule</h2>
+    <p class="mb-4">Explore the Mahabhishek & GaneshYag Schedule at our temple: <br><br>
+    <!-- Pooja Booking Office timings <br><br><b>Daily between 7:00 am to 7:00 pm at the Booking Counter Inside Temple Premises</b><br><br>
+    Following Poojas are performed under the explicit instructions and directions of competent priests only <br><br></p> -->
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="background-color: #FF2525;"> Temple Schedule</th>
+                    <th style="background-color: #FF2525;">Ritual/Activity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8:00 AM - 3:00 PM</td>
+                    <td>Daily abhishek</td>
+                </tr>
+                <tr>
+                    <td>8:00 AM - 12:00 PM</td>
+                    <td>Monthly Ganeshyag(Every Tuesday & Vinayak Chaturthi).</td>
+                </tr>
+                <tr>
+                    <td>8:00 AM - 12:00 PM</td>
+                    <td>Special GaneshYag on festival <br>(Gudipadwa,Akshay Trutiya,Diwali Padwa,Ganesh Jayanti).</td>
+                </tr>
+                <tr>
+                    <td>8:00 AM - 10:00 AM</td>
+                    <td>Sankashti Chaturthi Mahaabhishek</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
+ 
+{% endblock body %}

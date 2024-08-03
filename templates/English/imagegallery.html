@@ -1,0 +1,148 @@
+{% extends "English/base.html" %}
+{% block links %}
+{{ block.super }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<style>
+    .uniform-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .genie {
+      padding: 15px;
+    }
+
+    .genie:hover .uniform-image {
+      transform: scale(1.05);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .image-description p {
+        text-align: center;
+        padding-top: 10px;
+        color: #333;
+        font-size: 1em;
+    }
+
+    #scrollTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        cursor: pointer;
+        background-color: #007bff;
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        z-index: 100;
+    }
+
+    @media (max-width: 767px) {
+        .uniform-image {
+            height: 200px;
+        }
+    }
+</style>
+{% endblock links %}
+
+{% block body %}
+<h1 style="text-align: center; margin-top: 150px; font-weight: bold;">Image Gallery</h1>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+      <a href="/static/images/imagegallery/imagegallery1.jpeg" data-lightbox="photos">
+          <img class="img-fluid uniform-image" src="/static/images/imagegallery/imagegallery1.jpeg" alt="Gallery Image">
+      </a>
+      <div class="image-description">
+        <!--<p>Image Description Here</p>-->
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+      <a href="/static/images/imagegallery/imagegallery2.jpeg" data-lightbox="photos">
+          <img class="img-fluid uniform-image" src="/static/images/imagegallery/imagegallery2.jpeg" alt="Gallery Image">
+      </a>
+      <div class="image-description">
+        <!--<p>Image Description Here</p>-->
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+      <a href="/static/images/imagegallery/imagegallery3.jpeg" data-lightbox="photos">
+          <img class="img-fluid uniform-image" src="/static/images/imagegallery/imagegallery3.jpeg" alt="Gallery Image">
+      </a>
+      <div class="image-description">
+        <!--<p>Image Description Here</p>-->
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+      <a href="/static/images/imagegallery/imagegallery4.jpeg" data-lightbox="photos">
+          <img class="img-fluid uniform-image" src="/static/images/imagegallery/imagegallery4.jpeg" alt="Gallery Image">
+      </a>
+      <div class="image-description">
+        <!--<p>Image Description Here</p>-->
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+      <a href="/static/images/imagegallery/imagegallery5.jpeg" data-lightbox="photos">
+          <img class="img-fluid uniform-image" src="/static/images/imagegallery/imagegallery5.jpeg" alt="Gallery Image">
+      </a>
+      <div class="image-description">
+        <!--<p>Image Description Here</p>-->
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+      <a href="/static/images/imagegallery/imagegallery6.jpeg" data-lightbox="photos">
+          <img class="img-fluid uniform-image" src="/static/images/imagegallery/imagegallery6.jpeg" alt="Gallery Image">
+      </a>
+      <div class="image-description">
+        <!--<p>Image Description Here</p>-->
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 genie">
+      <a href="/static/images/imagegallery/imagegallery7.jpeg" data-lightbox="photos">
+          <img class="img-fluid uniform-image" src="/static/images/imagegallery/imagegallery7.jpeg" alt="Gallery Image">
+      </a>
+      <div class="image-description">
+        <!--<p>Image Description Here</p>-->
+    </div>
+  </div>
+  </div>
+</div>
+<button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var firstRowImages = document.querySelectorAll('.genie:nth-child(-n+3) .uniform-image');
+    firstRowImages.forEach(function(img) {
+        img.style.opacity = '1';
+        img.style.transform = 'translateY(0)';
+    });
+  })
+window.addEventListener('scroll', () => {
+  let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  let btn = document.getElementById('scrollTopBtn');
+  if (scrollPosition > 300) {
+    btn.style.display = 'block';
+  } else {
+    btn.style.display = 'none';
+  }
+
+  document.querySelectorAll('.uniform-image').forEach((img, i) => {
+    if (img.getBoundingClientRect().top < window.innerHeight) {
+      img.style.opacity = '1';
+      img.style.transform = 'translateY(0)';
+    }
+  });
+});
+
+function scrollToTop() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+{% endblock body %}

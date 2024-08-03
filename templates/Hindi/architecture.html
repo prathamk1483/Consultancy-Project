@@ -1,0 +1,147 @@
+{% extends "Hindi/base.html" %}
+{% block style %}
+{{ block.super }}
+<style>
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    margin: 10rem auto;
+    padding : 20px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 1100px;
+    background-color:#fff;
+    /* <!-- border: 2px solid black; */
+    /* border-radius: 8px; --> */
+    box-shadow: 1.8px 1.5px 4px 1.5px #eea7a7;
+    transition: box-shadow 0.3s ease-in-out;
+    justify-content:center;
+    align-items:center;
+}
+
+.main:hover {
+  box-shadow: 1px 2px 3px 2px #eea7a7;
+}
+
+.rightimg,
+.leftimg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    width: 30%;
+}
+
+.info {
+    display: flex;
+    justify-content:center;
+    background-color: white;
+    font-size: large;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 70%; /* Adjusted width */
+    color: #ff3300;
+    opacity: 0.8; /* Adjusted opacity */
+    /* border: 2px solid black; */
+}
+
+.top,
+.bottom {
+    display: block;
+    width: 80%;
+}
+
+.leftimg img,
+.rightimg img {
+    display: block;
+    height: 60%;
+    margin: 25px auto; /* Reduce top margin for images */
+    border-radius:6px;
+}
+
+.info-head {
+    background-color: #ff3300;
+    color: #fff;
+    margin: 6px auto; /* Adjusted margin */
+    padding: 12px; /* Adjusted padding */
+    text-align: center;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+
+#info {
+    /* margin: 30px 10px; */
+    hyphens: auto;
+}
+
+/* Media Query for screens smaller than 600px */
+@media (max-width :1189px){
+  .main{
+    display : flex;
+  }
+  .bottom{
+    margin-top:-60px;
+  }
+  .info{
+    opacity:60%;
+  }
+}
+@media (max-width: 1000px) {
+  .main {
+    flex-direction: column;  /* Stack elements vertically on smaller screens */
+  }
+  .rightimg,
+  .leftimg,
+  .info {
+      width: 92%;
+  }
+  .info{
+    opacity:60%;
+  }
+}
+</style>
+
+{% endblock style %}
+{% block body %}
+  <div class="row row-top" style="margin-top: 100px;">
+    {% comment %} <h1>Temple Architecture</h1> {% endcomment %}
+</div>
+<div class="row row-top">
+ <center><h1 id="main-architecture" style="margin:40px auto 0;width:fit-content;font-weight: 700; margin-bottom: -60px;">मंदिर
+  वास्तुकला</h1></center>
+</div>
+    <header id="top"></header>
+    
+    <section class="about-temple">
+      
+      <div class="main">
+        <div class="rightimg">
+          
+          <img src="/static/images/4.jpg" alt="temple" class="info-img">
+          <h1 class="info-head"> पुरानी वास्तुकला </h1>
+        </div>
+        <div class="info">
+          <div class="top">
+            <p id="info" style="font-family: Arial, Helvetica, sans-serif;">
+              सिद्धिविनायक गणेश प्रतिमा 16वीं शताब्दी में मिली और फिर इसे इंगोले परिवार द्वारा वडारूपी मंदिर में स्थापित किया गया। तब से 2000 तक इंगोले परिवार के विभिन्न सदस्यों ने मंदिर की देखभाल की।
+              भीड़ को समायोजित करने और मंदिर के पुनर्निर्माण के लिए मंदिर के नवीनीकरण की आवश्यकता को ध्यान में रखते हुए, इंगोले परिवार के सदस्यों ने 2000 में ट्रस्ट का गठन किया और फिर इस खूबसूरत नई वास्तुकला के अनुसार मंदिर का निर्माण कार्य 2006 के बाद शुरू हुआ। भक्तों के दान के सहयोग से, 2 साल के अंदर स्थापित हुआ नया मंदिर. संगमरमर और नवीनतम डिजाइन से सजाया गया नया निर्माण।
+            </p>
+          </div>
+        </div>
+        <div class="leftimg">
+          
+          <img src="/static/images/2.jpg" alt="temple" class="info-img">
+          <h1 class="info-head">नई वास्तुकला </h1>
+        </div>
+      </div>
+    </section>
+    {% endblock body %}

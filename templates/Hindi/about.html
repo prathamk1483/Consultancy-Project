@@ -1,0 +1,136 @@
+{% extends "Hindi/base.html" %}
+{% block links %}
+<link rel="stylesheet" href="/static/css/about.css">
+<link rel="stylesheet" href="/static/css/footer.css">
+{% endblock links %}
+{% block style %}
+{{ block.super }}
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .accordion {
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: #eee;
+        text-align: left;
+        transition: background-color 0.4s ease;
+    }
+    .accordion::after {
+        content: '\002B'; /* Unicode character for "plus" sign (+) */
+        color: #777;
+        float: right;
+    }
+    .accordion.active::after {
+        content: "\2212"; /* Unicode character for "minus" sign (-) */
+    }
+    .accordion:hover {
+        background-color: #ccc;
+    }
+    .panel {
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    #scrollTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        z-index: 100;
+        cursor: pointer;
+        background-color: #007bff;
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    #scrollTopBtn:hover {
+        background-color: #0056b3;
+    }
+    /* Remove border and outline from accordion when focused */
+    .accordion:focus {
+        border: none;
+        outline: none;
+    }
+    h1{
+        margin-top: 100px;
+        text-align: center;
+    }
+</style>
+{% endblock style %}
+{% block body %}
+<div class="container mt-5 contx" style="margin-bottom: 100px;">
+    <h1>हमारे बारे में</h1>
+    <div class="accordion active">इतिहास</div>
+    <div class="panel" style="max-height: none;">
+        <div class="info-card">
+            <img src="/static/images/about/about3.jpeg" alt="temple" class="info-img">
+            <p class="info">
+                सिद्धि विनायक की मूर्ति के इतिहास पर नजर डालें तो, मूर्ति की कथा महाभारत के विराट पर्व से मिलती है, जैसा कि वाहीवती के पुराने लोगों ने बताया था, जब पांडव विराट के साथ अज्ञात निवास में थे, और देवी के दर्शन हुए थे। इस मूर्ति ने एक अज्ञात निवास में वनवासी के रूप में अपना जीवन समाप्त कर लिया। इस मूर्ति को मध्य मुगल काल में दफनाया गया था। अचलपुर, दारापुर, खोलापुर के आसपास के गाँव मुगलों के नियंत्रण में थे। उसके बाद अंडा काल के छह सौ वर्ष बीत गए इसलिए मूर्ति का सही स्थान ज्ञात नहीं हो सका। लोग श्री का एहसास करना चाहते थे लेकिन मूर्ति नहीं मिली और अचानक खुदाई में मूर्ति फिर से मिल गई। यह 16वीं शताब्दी थी, तब से मूर्ति को एक महल के मंदिर में स्थापित कर दिया गया और इंगोले परिवार में मूर्ति की सेवा फिर से शुरू हो गई। इसका आयोजन आज भी जारी है। अत: श्री की असीम कृपा से इस परिवार को प्रचुर समृद्धि प्राप्त है। यह सिद्धि विनायक का वरदान है.
+            </p>
+        </div>
+    </div>
+    <div class="accordion">मंदिर की कथा</div>
+    <div class="panel">
+        <div class="info-card">
+            <img src="/static/images/about/about3.jpeg" alt="temple" class="info-img">
+            <p class="info">
+                मंदिर का प्रबंधन दीक्षा से इंगोले परिवार द्वारा किया जाता है। इंगोले परिवार के पूर्वजों स्वर्गीय श्री सीतारामजी, श्री शिवरामजी, श्री श्रीरामजी, श्री तुलसीरामजी ने मंदिर को सुचारू रूप से चलाने और गणपति उत्सव मनाने के लिए 25 जुलाई 2021 को अपनी कुछ जमीन मंदिर को दान कर दी। तदनुसार, 1921 से 1930 तक मंदिर का प्रबंधन का. श्री सीतारामजी, 1930 से 1940 - श्री शिवरामजी, 1940 से 1960 - श्री तुलसीरामजी, श्री तुकारामजी और 1960 से 1993 - श्री दयारामजी इंगोले। समय के साथ, भक्तों की बढ़ती संख्या के कारण, श्री दयारामजी इंगोले ने भक्तों की सुविधा और सुविधाओं के निर्माण के लिए एक मंदिर ट्रस्ट की स्थापना का सुझाव दिया। तदनुसार, ट्रस्ट बनाने की जिम्मेदारी श्री विलासराव तुकारामजी इंगोले को दी गई। कई कठिनाइयों के बाद 31 अगस्त 2002 को ट्रस्ट की स्थापना की गई, ट्रस्ट की स्थापना के बाद से अब तक श्री विलासराव इंगोले ने ट्रस्ट के अध्यक्ष के रूप में कार्य किया और इंगोले परिवार के अन्य नामांकित सदस्यों ने ट्रस्टी के रूप में कार्य किया। इसके बाद, नए मंदिर का निर्माण 2005 से शुरू किया गया और 2007 में पूरा हुआ। <br>
+                 - हर साल भाद्रपद शुक्ल 4 से पूर्णिमा तक दस दिवसीय गणेश चतुर्थी उत्सव मनाया जाता है। <br>
+                  - इसमें दैनिक अन्नदान, ज्ञानंदन, भजन, कीर्तन, काकड़ा और हरिपाठ शामिल हैं।<br>
+                 - पूर्णिमा पर मृदंग की थाप और हर्षध्वनि के बीच मूर्ति विसर्जन किया जाता है। <br>
+                  - इसके अलावा हर साल माघ शुक्ल पक्ष में एक सप्ताह तक गणेश जयंती का त्योहार मनाया जाता है।
+             </p>
+             
+        </div>
+    </div>
+    <div class="accordion">मूर्ति की विशिष्टता</div>
+    <div class="panel">
+        <div class="info-card">
+            <img src="/static/images/about/about3.jpeg" alt="temple" class="info-img">
+            <p class="info">
+                यह मूर्ति संपूर्ण महाराष्ट्र की दिव्य सुंदर मनमोहक मूर्तियों में से एक है। मूर्ति दाहिनी सूंड की है और दाहिनी ओर सिद्धि तथा बायीं ओर रिद्धि है। एकदंत, पैर में पद्म, शंख का प्रतीक है। जो शाद ऐश्वर्य का प्रतीक है। जिन लोगों ने इसे देखा है उन्हें कुछ भी याद नहीं है। पोटली के दोनों तरफ फूल और अष्टमसिद्धि, अणिमा, गरिमा, लघिमा, महिमा ईशित्व वशित्व प्रतिकम से बंधे होते हैं। हाथ में माल और मोदक जीवन की समृद्धि का संकेत देते हैं, जिनके दर्शन से भगवान भौतिक आवश्यकताओं की पूर्ति करते हैं और आगे यही भगवद्भक्ति से श्री के समक्ष अपने जीवन के दुखों को टालते हैं, उनके जीवन में सुख और शांति आती है। नि:संतान लोगों को संतान प्राप्ति होती है। मूर्ति का अद्भुत सौंदर्य कहीं देखने को नहीं मिलता। कोई भी व्यक्ति कितना भी तार्किक, बेचैन क्यों न हो, जब वह मूर्ति के सामने आता है, तो उसे शांति और खुशी की अनुभूति होती है। इसलिए, जब उत्तरायण दक्षिणायन हो जाता है, तो सूर्योदय की पहली किरण मूर्ति पर पड़ती है। मानो सूर्य भी श्री के दर्शन के बिना संवत्सर में प्रवेश नहीं करना चाहते थे।
+            </p>
+        </div>
+    </div>
+    <button id="scrollTopBtn">&#8679;</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                // Close all open panels
+                var allPanels = document.querySelectorAll('.panel');
+                allPanels.forEach(function(otherPanel) {
+                    otherPanel.style.maxHeight = null;
+                    otherPanel.previousElementSibling.classList.remove("active");
+                });
+                // Open the clicked one
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+        // Automatically open the first accordion panel if it's not already active
+        if (i === 0 && !acc[i].classList.contains("active")) {
+            acc[i].click();
+        }
+    }
+});
+</script>
+{% endblock body %}

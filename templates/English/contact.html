@@ -1,0 +1,175 @@
+{% extends "English/base.html" %}
+{% block links %}
+  <!-- <link rel="stylesheet" href="/static/css/navbar.css"> -->
+  <link rel="stylesheet" href="/static/css/footer.css">
+  <link rel="stylesheet" href="/static/css/contact.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/static/script/script.js"></script>
+{% endblock links %}
+
+{% block style %}
+{{ block.super }}
+<style>
+    body {
+      overflow-x: hidden;
+    }
+    h1 {
+      /* font-family: "Poppins", sans-serif; */
+      font-weight: bolder;
+      margin-top: 50px;
+    }
+    h5 b,p b{
+      color: #333;
+    }
+    .row {
+      /* align-items: center; */
+      justify-content: center;
+    }
+
+    iframe {
+      height: 60vh;
+      width: 100%;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      border: none;
+      border-bottom: 2px solid rgb(128, 126, 126);
+      background: transparent;
+      outline: none;
+      width: 100%;
+      text-transform: capitalize;
+      padding: 1rem 0.4rem;
+    }
+
+    #message {
+      min-height: 120px;
+    }
+
+    /* Add this CSS to your existing styles */
+
+    /* Card styling for the specific section */
+    .card-section .column {
+      flex: 1;
+      margin: 0 10px;
+    }
+
+    .card-section .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      margin: 30px;
+    }
+
+    .card-section .img-container img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .card-section .card h3 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .card-section .card p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .card-section .address-info,
+    .card-section .contact-info,
+    .card-section .email-info {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .card-section .column {
+        flex: 1 0 100%;
+        margin: 10px 0;
+      }
+    }
+    
+    </style>
+{% endblock style %}
+
+{% block body %}
+  <section class="cont" style="margin-top: 70px;">
+    <div id="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30242.57434113686!2d73.768515!3d18.649550450000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e76cf2f9bb%3A0x51c2a6d121bcc6c8!2sNigdi%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1694260682285!5m2!1sen!2sin" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section >
+
+    <div class="row" style="margin-top: 30px;">
+      <div class="col-lg-8 col-md-12 p-5 bg-white rounded-3 " style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 40px;">
+        <center>
+          <h1 style="font-size:3rem;font-weight:bolder;margin-top: 3.5rem;margin-bottom: 3rem;">
+            Contact us</h1>
+        </center>
+
+        <div class="d-flex mb-3 flex-column" style="font-family: 'Poppins', sans-serif; ">
+
+          <form class="row mb-3">
+            <div class="col-md-6 p-3">
+              <input required placeholder="first name" type="text" name="" id="" />
+            </div>
+            <div class="col-md-6 p-3">
+              <input required placeholder="last name" type="text" name="" id="" />
+            </div>
+            <div class="col-md-6 p-3">
+              <input required placeholder="E-mail" type="email" name="" id="" />
+            </div>
+            <div class="col-md-6 p-3">
+              <input required placeholder="phone" type="tel" name="" id="" />
+            </div>
+            <div class="col-md">
+              <textarea required name="" placeholder="write your message" id="message" cols="30" rows="1"></textarea>
+            </div>
+            <div class="col-md-12 p-3">
+              <input class="btn px-4 py-3 btn-outline-dark" type="submit" value="Send Message" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="card-section">
+    <div class="row" style="font-family: 'Poppins', sans-serif;">
+      <div class="column">
+        <div class="card" style="background-color: rgb(244, 238, 238)">
+          <h5><b style="color: #333;">Send Mail </b><i class='fa fa-arrow-right'></i></h5>
+          <h1>Email</h1><br>
+          <p><b>siddhivinayakavaygaon@gmail.com
+            </b></p>
+          <i class="fa fa-envelope-open" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card" style="background-color: rgb(244, 238, 238)">
+          <h5><b>Call US Now </b><i class='fa fa-arrow-right'></i></h5>
+          <h1>Phone</h1><br>
+          <p><b>+91 9822545331
+            </b></p>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card" style="background-color: rgb(244, 238, 238)">
+          <h5><b>Find Us Here </b><i class='fa fa-arrow-right'></i></h5>
+          <h1>Address</h1><br>
+          <p><b>Siddhivinayak Sansthan, Waigaon
+            </b></p>
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+      </div>
+    </div>
+    {% endblock body %}

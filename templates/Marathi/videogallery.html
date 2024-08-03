@@ -1,0 +1,81 @@
+{% extends "Marathi/base.html" %}
+{% block links %}
+    <link rel="stylesheet" href="/static/css/video.css">
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+{% endblock links %}
+{%block style%}
+{{ block.super }}
+<style>
+.photo-gallery .container {
+    max-width: 100%; /* Use the full width of the photo-gallery */
+    padding: 0 15px; /* Adjust padding as needed */
+    margin: 0 auto; /* Center the container if needed */
+}
+
+.photo-gallery .container .row.photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-gallery .container .row.photos .frame {
+    flex: 0 0 33.3333%; /* Each frame takes up one-third of the container width */
+    padding: 10px; /* Adds space between frames */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* Responsive iframe sizes */
+.photo-gallery .container .row.photos .frame iframe {
+    width: 100%; /* Make iframe responsive */
+    height: auto; /* Adjust height automatically */
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .photo-gallery .container .row.photos .frame {
+        flex: 0 0 100%; /* Each frame takes the full width on smaller screens */
+    }
+}
+
+</style>
+{%endblock%}
+{% block body %}
+
+    <h1
+        style="font-family: 'Poppins',sans-serif;font-weight: bolder;width: 100%; text-align: center;font-size: 3.5em;color: #1f003b;margin-top:150px;margin-bottom: 3rem;">
+        व्हिडिओ गॅलरी</h1>
+        <div class="photo-gallery">
+            <div class="container">
+                <div class="row photos">
+                    <div class="frame">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/y1L4TkvSBiQ?si=C3t-fAcAoM0-F3hf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="frame">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Hfu34DXTjow?si=rcfzpjW70DvUGb0h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="frame">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YMhyoLCbVlA?si=EPy1Aohu75IFUT34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    <script>
+
+        // Listening to the video element
+        const clip = document.querySelectorAll(".vid")
+
+        /* Adding the event listeners on the video to play/pause the video. */
+        clip.addEventListener("mouseover", function (e) {
+            clip.play();
+        })
+
+        /* Applying the mouse out event to pause the video */
+        clip.addEventListener("mouseout", function (e) {
+            clip.pause();
+        })
+    </script>
+    {% endblock body %}

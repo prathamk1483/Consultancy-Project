@@ -1,0 +1,136 @@
+
+{% extends "Marathi/base.html" %}
+{% block links %}
+<link rel="stylesheet" href="/static/css/about.css">
+<link rel="stylesheet" href="/static/css/footer.css">
+{% endblock links %}
+{% block style %}
+{{ block.super }}
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .accordion {
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: #eee;
+        text-align: left;
+        transition: background-color 0.4s ease;
+    }
+    .accordion::after {
+        content: '\002B'; /* Unicode character for "plus" sign (+) */
+        color: #777;
+        float: right;
+    }
+    .accordion.active::after {
+        content: "\2212"; /* Unicode character for "minus" sign (-) */
+    }
+    .accordion:hover {
+        background-color: #ccc;
+    }
+    .panel {
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    #scrollTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        z-index: 100;
+        cursor: pointer;
+        background-color: #007bff;
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    #scrollTopBtn:hover {
+        background-color: #0056b3;
+    }
+    /* Remove border and outline from accordion when focused */
+    .accordion:focus {
+        border: none;
+        outline: none;
+    }
+    h1{
+        margin-top: 100px;
+        text-align: center;
+    }
+</style>
+{% endblock style %}
+{% block body %}
+<div class="container mt-5 contx" style="margin-bottom: 100px;">
+    <h1>मंदिर बद्दल</h1>
+    <div class="accordion active">
+        इतिहास</div>
+    <div class="panel" style="max-height: none;">
+        <div class="info-card">
+            <img src="/static/images/about/about3.jpeg" alt="temple" class="info-img">
+            <p class="info">
+                सिद्धी विनायकाच्या मूर्तीचा इतिहास पाहिल्यास, मूर्तीची आख्यायिका महाभारतातील विराट पर्वापर्यंत जाते, वहीवतीच्या जुन्या लोकांनी सांगितल्याप्रमाणे, जेव्हा पांडव विराटसोबत अज्ञातवासात होते, आणि त्या मूर्तीचे दर्शन होते. या मूर्तीने अज्ञात निवासस्थानात वनवासी म्हणून त्यांचे जीवन संपवले. ही मूर्ती मध्य मुघल काळात पुरण्यात आली होती. आजूबाजूची अचलपूर, दारापूर, खोलापूर ही गावे मुघलांच्या ताब्यात होती. त्यानंतर सहाशे वर्षांचा आंदा काळ लोटला त्यामुळे मूर्तीचे नेमके स्थान कळू शकले नाही. लोकांना श्रीचा साक्षात्कार घडवायचा होता पण मूर्ती सापडली नाही आणि अचानक खोदकामात पुन्हा मूर्ती सापडली. हे 16 वे शतक होते, तेव्हापासून ही मूर्ती राजवाड्यातील मंदिरात ठेवण्यात आली आणि इंगोले कुटुंबात मूर्तीची सेवा पुन्हा सुरू झाली. आजही ते आयोजन सुरू आहे. त्यामुळे श्रींच्या असीम कृपेने या कुटुंबाला उदंड समृद्धी लाभली आहे. हे सिद्धी विनायकाचे वरदान आहे.            </p>
+        </div>
+    </div>
+    <div class="accordion">मंदिराची कथा</div>
+    <div class="panel">
+        <div class="info-card">
+            <img src="/static/images/about/about3.jpeg" alt="temple" class="info-img">
+            <p class="info">
+                मंदिराचा कारभार दिक्षा येथील इंगोले कुटुंबीय सांभाळतात. इंगोले घराण्याचे पूर्वज कै. श्री सीतारामजी, श्री शिवरामजी, श्री श्रीरामजी, श्री तुळशीरामजी यांनी मंदिराचे कामकाज सुरळीत चालण्यासाठी आणि गणपती उत्सव साजरा करण्यासाठी २५ जुलै २०२१ रोजी स्वतःची काही जमीन मंदिराला दान केली. त्यानुसार 1921 ते 1930 पर्यंत मंदिराचे व्यवस्थापन का. श्री सीतारामजी, 1930 ते 1940 - श्री शिवरामजी, 1940 ते 1960 - श्री तुळशीरामजी, श्री तुकारामजी आणि 1960 ते 1993 - श्री दयारामजी इंगोले. कालांतराने भाविकांच्या वाढत्या संख्येमुळे श्री.दयारामजी इंगोले यांनी भाविकांच्या सोयीसाठी आणि सुविधा निर्माण करण्यासाठी मंदिर ट्रस्टची स्थापना करण्याची सूचना केली. त्यानुसार ट्रस्ट निर्माण करण्याची जबाबदारी श्री. विलासराव तुकारामजी इंगोले यांच्यावर देण्यात आली. अनेक अडचणींनंतर 31 ऑगस्ट 2002 रोजी ट्रस्टची स्थापना करण्यात आली, ट्रस्टच्या स्थापनेपासून आतापर्यंत श्री. विलासराव इंगोले यांनी ट्रस्टचे अध्यक्ष म्हणून काम पाहिले आणि इंगोले कुटुंबातील इतर नामनिर्देशित सदस्यांनी विश्वस्त म्हणून काम पाहिले. त्यानंतर, नवीन मंदिराचे बांधकाम 2005 पासून हाती घेण्यात आले आणि 2007 मध्ये पूर्ण झाले. <br>
+                - दरवर्षी भाद्रपद शुक्ल 4 ते पौर्णिमा असा दहा दिवसांचा गणेश चतुर्थी उत्सव साजरा केला जातो. <br>
+                 - त्यात रोजचे अन्नदान, ज्ञानदान, भजन, कीर्तन, काकडा आणि हरिपाठ यांचा समावेश होतो.<br>
+                - पौर्णिमेला मृदंगाच्या तालावर आणि आनंदाच्या नादात मूर्ती विसर्जन केले जाते. <br>
+                 - तसेच गणेश जयंती उत्सव दरवर्षी माघ शुक्ल पक्षात आठवडाभर साजरा केला जातो.
+             </p>
+             
+        </div>
+    </div>
+    <div class="accordion">मूर्तीचे वेगळेपण</div>
+    <div class="panel">
+        <div class="info-card">
+            <img src="/static/images/about/about3.jpeg" alt="temple" class="info-img">
+            <p class="info">
+                ही मूर्ती संपूर्ण महाराष्ट्रातील दैवी सुंदर आकर्षक मूर्तींपैकी एक आहे. ही मूर्ती उजव्या सोंडेची असून उजव्या बाजूला सिद्धी आणि डाव्या बाजूला रिद्धी आहे. एकदंत, पायात पद्म, शंख प्रतीक. जे शद ऐश्वर्याचे प्रतीक आहे. ज्यांनी पाहिलंय त्यांना काही चुकत नाही. बंधाऱ्याच्या दोन्ही बाजू फुलांनी बांधल्या आहेत आणि अष्टमसिद्धी, अणिमा, गरिमा, लघिमा, महिमा इशित्व वशित्व प्रतीकम्. हातातील माळ आणि मोदक हे जीवनातील समृद्धी दर्शवतात, ज्याच्या दर्शनाने भगवंत भौतिक गरजा पूर्ण करतात आणि पुढे हे भगवेले, जे आपल्या जीवनातील दुःखे श्रींच्या समोर भक्तिभावाने टाळतात, त्यांच्या जीवनात सुख-शांती नांदते. जे निपुत्रिक आहेत त्यांना संतती प्रदान केली जाते. मूर्तीचे अप्रतिम सौंदर्य कुठेच पाहायला मिळत नाही. एखादी व्यक्ती कितीही तर्कशुद्ध, चंचल असली, तरी जेव्हा तो मूर्तीसमोर येतो, तेव्हा त्याला शांती आणि आनंदाची अनुभूती येऊ शकत नाही. त्यामुळे उत्तरायण जेव्हा दक्षिणायन होते तेव्हा सूर्योदयाचा पहिला किरण मूर्तीवर पडतो. जणू काही सूर्यालाही श्रींच्या दर्शनाशिवाय संवत्सरात प्रवेश करायचा नव्हता.            </p>
+        </div>
+    </div>
+    <button id="scrollTopBtn">&#8679;</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                // Close all open panels
+                var allPanels = document.querySelectorAll('.panel');
+                allPanels.forEach(function(otherPanel) {
+                    otherPanel.style.maxHeight = null;
+                    otherPanel.previousElementSibling.classList.remove("active");
+                });
+                // Open the clicked one
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+        // Automatically open the first accordion panel if it's not already active
+        if (i === 0 && !acc[i].classList.contains("active")) {
+            acc[i].click();
+        }
+    }
+});
+</script>
+{% endblock body %}
